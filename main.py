@@ -36,8 +36,8 @@ def process_message(user_message: str) -> str:
         return ":("
 
 # The main command
-@client.command(name="baby")
-async def test(ctx: commands.Context, arg: str = "") -> None:
+@client.command(name="baby", help="Gets a baby name. Use !baby n to get a baby name with n middle names")
+async def baby(ctx: commands.Context, arg: str = "") -> None:
     try:
         await ctx.send(process_message(arg))
     except Exception as e:
@@ -47,6 +47,17 @@ async def test(ctx: commands.Context, arg: str = "") -> None:
 @client.event
 async def on_ready() -> None:
     print(f'{client.user} is now running!')
+
+
+# about command
+@client.command(name="about", help="learn about this bot")
+async def about(ctx: commands.Context) -> None:
+    try:
+        await ctx.send("""Made by Jaden!\n
+                       GitHub: https://github.com/jadenabrams100/Baby-Name-Bot""")
+    except Exception as e:
+        print("Something happened and we couldn't respond")
+        print(e)
 
 
 # Main function
