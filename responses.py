@@ -8,9 +8,19 @@ def get_response(num_middle_names: int) -> str:
     middle_names_list: list[str] = choices(namesRepo["middle"], k=num_middle_names)
     middle: str = " ".join(middle_names_list)
     last: str = choice(namesRepo["last"])
+    if len(middle_names_list) < 1:
+        return first + " " + last
     return first + " " + middle + " " + last
 
 def load_json() -> None:
-    with open('names.json', 'r') as f:
-        global namesRepo
-        namesRepo = load(f)
+    global namesRepo
+    try:
+        with open('first.json', 'r') as f:
+            namesRepo["first"] = load(f)
+        with open('middle.json', 'r') as f:
+            namesRepo["middle"] = load(f)
+        with open('last.json', 'r') as f:
+            namesRepo["last"] = load(f)
+    except Exception as e:
+        print("Could not load json, see stack trace")
+        print(e)
