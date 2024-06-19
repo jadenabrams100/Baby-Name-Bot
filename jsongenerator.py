@@ -3,11 +3,11 @@ from json import dump
 first = []
 middle = []
 last = []
-with open("rawnames.txt", "r") as f:
+with open("rawnames.txt", "r", encoding='utf-8') as f:
     for line in f:
         if len(line) == 0 or line[0] == '\n':
             continue
-        line.replace("\n", "")
+        line.replace('\n', '')
         words = line.split(' ')
         if(len(words) == 0):
             continue
