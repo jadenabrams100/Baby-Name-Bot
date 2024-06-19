@@ -12,6 +12,8 @@ with open("rawnames.txt", "r", encoding='utf-8') as f:
         if(len(words) == 0):
             continue
         first.append(words[0])
+        if(len(words) == 1):
+            continue
         last.append(words[len(words) - 1])
         words = words[1:-1]
         middle.extend(words)
