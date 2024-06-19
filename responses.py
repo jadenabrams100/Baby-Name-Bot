@@ -19,11 +19,11 @@ def get_response(num_middle_names: int) -> str:
 def load_json() -> None:
     global namesRepo
     try:
-        with open('first-test.json', 'r') as f:
+        with open('first.json', 'r') as f:
             namesRepo["first"] = load(f)
-        with open('middle-test.json', 'r') as f:
+        with open('middle.json', 'r') as f:
             namesRepo["middle"] = load(f)
-        with open('last-test.json', 'r') as f:
+        with open('last.json', 'r') as f:
             namesRepo["last"] = load(f)
     except Exception as e:
         print("Could not load json, see stack trace")

@@ -16,11 +16,11 @@ with open("rawnames.txt", "r", encoding='utf-8') as f:
         words = words[1:-1]
         middle.extend(words)
 
-with open("first-test.json", "w") as f:
+with open("first.json", "w") as f:
     dump(first, f)
 
-with open("middle-test.json", "w") as f:
+with open("middle.json", "w") as f:
     dump(middle, f)
 
-with open("last-test.json", "w") as f:
+with open("last.json", "w") as f:
     dump(last, f)
