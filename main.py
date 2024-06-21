@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from discord import Intents, Client, Message
 from discord.ext import commands
 from responses import get_response, load_json
+from random import randint
 
 # Load in token
 load_dotenv()
@@ -19,6 +20,8 @@ client: Client = commands.Bot(command_prefix='!' ,intents = intents)
 # Message functionality
 def process_message(user_message: str) -> str:
     additionalNames: int = -1
+    if user_message == 'r':
+        return get_response(randint(0, 150))
     try:
         additionalNames = int(user_message)
     except:
@@ -36,7 +39,7 @@ def process_message(user_message: str) -> str:
         return ":("
 
 # The main command
-@client.command(name="baby", help="Gets a baby name. Use !baby n to get a baby name with n middle names")
+@client.command(name="baby", help="Gets a baby name. Use !baby <n> to get a baby name with n middle names and !baby r to get a random number of middle names")
 async def baby(ctx: commands.Context, arg: str = "") -> None:
     try:
         await ctx.send(process_message(arg))
