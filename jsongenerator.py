@@ -1,9 +1,10 @@
 from json import dump
 
+name_source = "rawnames.txt"
 first = []
 middle = []
 last = []
-with open("rawnames.txt", "r", encoding='utf-8') as f:
+with open(name_source, "r", encoding='utf-8') as f:
     for line in f:
         if len(line) == 0 or line[0] == '\n':
             continue
