@@ -1,7 +1,6 @@
 from json import dump
 
-name_source = "baby-names-20240822.txt"
-# name_source = "rawnames.txt"
+name_source = "rawnames.txt"
 first = []
 middle = []
 last = []
