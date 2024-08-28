@@ -28,3 +28,8 @@ Stopping the container:
 Removing image and container:
 1. After completing the steps in Stopping the container, run ```sudo docker rm running-baby-name-bot``` to remove the container.
 2. run ```sudo docker image remove baby-name-bot``` to remove the image.
+
+Updating the bot.
+1. Add in the strings.
+2. Generate input JSON files with ```python jsongenerator.py```
+3. Go into ```first.json```, ```middle.json```, and ```last.json``` in the editor of your choice and replace all instances of ```\n``` with ``` ```
