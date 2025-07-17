@@ -9,7 +9,7 @@ Install these with ```pip install -r requirements.txt```
 
 Start the bot with ```python main.py```
 
-Source file is current as of 08/22/2024 12:00 AM EDT
+Source file is current as of 11/03/2024 01:22 PM EST
 
 Thanks to Claire (claireconklin@gmail.com) for aiding in updating the list
 
