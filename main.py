@@ -9,7 +9,6 @@ from random import randint
 # Load in token
 load_dotenv()
 TOKEN: Final[str] = os.getenv('DISCORD_TOKEN')
-print(TOKEN)
 
 
 # Bot setup

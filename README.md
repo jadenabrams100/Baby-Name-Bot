@@ -9,7 +9,7 @@ Install these with ```pip install -r requirements.txt```
 
 Start the bot with ```python main.py```
 
-Source file is current as of 07/17/2025 07:25 PM EDT
+Source file is current as of 11/10/2025 02:21 PM EST
 
 Thanks to Claire (claireconklin@gmail.com) for aiding in updating the list
 
@@ -32,4 +32,3 @@ Removing image and container:
 Updating the bot.
 1. Add in the strings.
 2. Generate input JSON files with ```python jsongenerator.py```
-3. Go into ```first.json```, ```middle.json```, and ```last.json``` in the editor of your choice and replace all instances of ```\n``` with ``` ```
