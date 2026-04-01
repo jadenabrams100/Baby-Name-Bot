@@ -1,6 +1,6 @@
 from json import dump
 
-name_source = "rawnames.txt"
+name_source = "SUPERIORNAMES.txt"
 first = []
 middle = []
 last = []
