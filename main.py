@@ -19,7 +19,8 @@ client: Client = commands.Bot(command_prefix='!' ,intents = intents)
 # Message functionality
 def process_message(user_message: str) -> str:
     additionalNames: int = -1
-    # get baby name with a random number of middle names
+    # handle a random amount of baby names
+
     if user_message == 'r':
         return get_name(randint(0, 150))
     # get multiple names in a row if the user does x followed by something
@@ -28,14 +29,18 @@ def process_message(user_message: str) -> str:
     
     # standard case, parse number of middle names
     try:
+        #get how many middle names we want
         additionalNames = int(user_message)
     except:
+        #default case
         additionalNames = 0
     
+    # handle well-formed, malicious user input
     if additionalNames < 0:
         return "Nice Try"
     if additionalNames > 150:
         return "Too many middle names"
+    # main call to get the name
     try:
         response: str = get_name(additionalNames)
         return response
